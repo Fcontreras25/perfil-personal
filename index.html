@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>webPersonal</title>
+</head>
+
+<body>
+    <div class="cabecera">
+        <div class="nombre">
+            <h1> Contreras Martinez Fatima Belén</h1>
+        </div>
+        <div class="imagen alinear">
+            <img src="yo.jpeg" alt="Fatima Contreras" />
+        </div>
+    </div>
+    <div class="opciones">
+        <a href="Cv.pdf" target="_blank">
+            <button>Formacion academica</button>
+        </a>
+        <button id="menuCorreo">Correo electronico</button>
+        <div id="correo" class="menu oculto">
+            <ul class="sinEfectos">
+                <li> <a href="#" onclick="correoInstitucional(); return false;"><i
+                            class="fa-regular fa-envelope"></i>Institucional</a></li>
+                <li> <a href="#" onclick="correoPersonal(); return false;"><i
+                            class="fa-solid fa-envelope"></i>Personal</a></li>
+            </ul>
+        </div>
+        <button id="menuRedes">Redes Sociales </button>
+        <div id="redes" class="menu oculto">
+            <ul>
+                <li class="sinEfectos"><a href="https://www.instagram.com/bel.contreras23?igsh=MTBmYzZha2JuYnBkZw=="><i
+                            class="fa-brands fa-instagram"> </i>Instagram</a></li>
+                <li class="sinEfectos"><a href="https://www.facebook.com/fatima.contreras.39501?mibextid=JRoKGi"><i
+                            class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                <li class="sinEfectos"><a href="http://www.linkedin.com/in/contreras-martinez-fatima-belen-229482277"><i
+                            class="fa-brands fa-linkedin"> </i>linkedin</a></li>
+            </ul>
+        </div>
+        <button ><a href="hobbie.html" id="bH">Hobbies</a> </button>
+    </div>
+    <div class="datosCuriosos fondoP">
+        <div class="dato1 alinear fondo">
+            <img src="imagen1.jpg" alt="Representacion" />
+            <h2>¿Qué es la criptografia?</h2>
+            <p>La criptografía es la ciencia y el arte de proteger la información mediante la transformación de datos en
+                formatos que solo pueden ser leídos o entendidos por personas autorizadas. Su propósito principal es
+                garantizar la confidencialidad, integridad y autenticidad de la información.</p>
+            <p>En la actualidad, la criptografía es fundamental para proteger transacciones en línea, comunicaciones y
+                datos personales, y sigue evolucionando con el desarrollo de nuevas tecnologías, como la criptografía
+                cuántica.</p>
+        </div>
+        <div class="dato2 alinear fondo">
+            <h2>Algoritmo Camellia</h2>
+            <p>Es un algoritmo de cifrado de bloque que fue diseñado por los investigadores japoneses Mitsuru Matsui y
+                Hideo Nakashima, junto con la colaboración de la empresa Mitsubishi Electric. Su desarrollo comenzó en
+                2000, y fue presentado como una alternativa al AES.</p>
+            <ul>
+                <h3>Características de Camellia:</h3>
+                <li>Cifrado de Bloque: Opera sobre bloques de 128 bits.</li>
+                <li>Tamaños de Clave: Soporta longitudes de clave de 128, 192 y 256 bits.</li>
+                <li>Estructura: Utiliza una estructura de red de Feistel, que le proporciona una buena resistencia
+                    frente a varios tipos de ataques.</li>
+                <li>Eficiencia: Está diseñado para ser eficiente tanto en software como en hardware, lo que lo hace
+                    adecuado para una variedad de aplicaciones.</li>
+            </ul>
+        </div>
+        <div class="dato3 alinear fondo">
+            <h2>Dato Famoso</h2>
+            <p>En 2017, un grupo de investigadores de China logró transmitir un estado cuántico de manera segura entre
+                la Tierra y un satélite, utilizando un protocolo de criptografía cuántica llamado "distribución de
+                claves cuánticas" (QKD). Este logro demostró que es posible establecer una comunicación completamente
+                segura basada en principios cuánticos, abriendo nuevas posibilidades para la seguridad en las
+                comunicaciones futuras.</p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

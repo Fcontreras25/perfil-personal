@@ -1,0 +1,75 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+h1{
+    border-radius: 60px;
+    text-align: center;
+    height: 60px;
+    width: 100%;
+    margin: 15px;
+    padding-top: 16px;
+    box-shadow: 0 4px 20px rgba(30, 40, 0, 0.433);
+    background-color: rgba(37, 71, 1, 0.375);
+}
+
+.contenedor h1{
+    border-radius: 60px;
+    text-align: center;
+    padding-top: 10px;
+    width: auto;
+    transition: transform 0.3s;
+    box-shadow: 5px 0 0 5px rgba(15, 19, 0, 0.578);
+    background-color: rgba(209, 235, 181, 0.31);
+}
+
+.contenedor h1:hover {
+    box-shadow: 15px 0 0 5px rgba(26, 39, 0, 0.555);
+    transform: translateY(-5px); 
+}
+
+.contenedor{
+    display: grid;
+    height: 100%;
+    grid-template-rows: 1fr; 
+    grid-template-columns: 50% 50%; 
+}
+
+.museos,.conocer{
+    margin: 15px;
+    border-radius: 60px;
+    box-shadow: 0 4px 20px rgba(25, 33, 0, 0.852);
+    background-color: rgba(200, 213, 155, 0.132);
+}
+
+.museos {
+    grid-column: 1; 
+    grid-row: 1 ; 
+}
+
+.conocer {
+    grid-column: 2; 
+    grid-row: 1; 
+}
+
+.collage {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px; /* Espacio entre imágenes */
+    width: 100%; /* Ancho del contenedor */
+}
+
+.imagen img {
+    width: 70%; /* Hacer que la imagen ocupe todo el contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: transform 0.3s; /* Transición para efectos de hover */
+}
+
+.imagen img:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
