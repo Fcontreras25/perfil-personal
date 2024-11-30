@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/estilos3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Llave Publica</title>
+    <title>Llave Pública</title>
 </head>
+
 <body>
     <div class="titulo">
-        <h1>Hola, esta es mi llave publica</h1>
+        <h1>Hola, esta es mi llave pública</h1>
     </div>
 
-    <script>
-        const llave = document.getElementById('llave');
+    <div class="contenedor-llave" id="contenedor-llave">
+        -----BEGIN PUBLIC KEY-----
+        MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApQV/fLO1N1kvXfDQTPkm
+        6JIHQmdtCPsia4B/ws8hID0em6pJgSFxnKuVIfuHGpbozf0R78oa4hPzGX2G/aje
+        TBMS3JCrXevwtLovz/GFAJdQM8TGU+1ObFEINyMcmSOsqlLAFiJOBf138n2uLIXL
+        s7uk9xIIq7T4lOWvMitqrumeO3BMTzLeqMGvRIuA1LfdqF9bSMjWDFliN4gSJgQ8
+        wDfz7/jRCSZl8DaTo6VbaBcB1RcyWlHGobploKkN1MdEQCiSicbJIWVlDbkq4Mzm
+        uzqWj0LyVUus2RBplleUYlZ25bt8dTuLvpZ7RoyZzXEKvHeBjZ+FpmcfvEqqocH3
+        RwIDAQAB
+        -----END PUBLIC KEY-----
+    </div>
 
-        llave.addEventListener('click', () => {
-            // Crear un elemento temporal para copiar el contenido
-            const texto = llave.innerText;
-            navigator.clipboard.writeText(texto)
+    <button id="copiar-llave">Copiar Llave Pública</button>
+
+    <script>
+        document.getElementById('copiar-llave').addEventListener('click', () => {
+            const contenidoLlave = document.getElementById('contenedor-llave').innerText;
+            navigator.clipboard.writeText(contenidoLlave)
                 .then(() => {
-                    alert('LLave copiada al portapapeles: ' + texto);
+                    alert('Llave pública copiada al portapapeles');
                 })
                 .catch(err => {
-                    console.error('Error al copiar al portapapeles: ', err);
+                    console.error('Error al copiar al portapapeles:', err);
                 });
         });
     </script>
-
-    <div class="contenedor-llave" id="llave">
-        asxasx
-    </div>
-    
 </body>
+
 </html>
