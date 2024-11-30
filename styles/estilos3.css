@@ -20,7 +20,7 @@ h1{
     display: none;
 }
 
-button #copiar-llave{
+button .tn-llave {
     background-color: aqua;
     height: 20px;
     width: 15px;
