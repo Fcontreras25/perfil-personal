@@ -37,5 +37,5 @@ button.btn-llave {
 
 button.btn-llave:hover {
     background-color: rgba(13, 42, 13, 0.163);
-    color: white;
+    color: rgb(28, 28, 28);
 }
