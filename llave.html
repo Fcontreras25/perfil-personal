@@ -7,6 +7,12 @@
     <link rel="stylesheet" type="text/css" href="styles/estilos3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Llave Pública</title>
+    <style>
+        /* Ocultar el contenido del contenedor de la llave pública */
+        #contenedor-llave {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,7 +36,7 @@
 
     <script>
         document.getElementById('copiar-llave').addEventListener('click', () => {
-            const contenidoLlave = document.getElementById('contenedor-llave').innerText;
+            const contenidoLlave = document.getElementById('contenedor-llave').innerText.trim();
             navigator.clipboard.writeText(contenidoLlave)
                 .then(() => {
                     alert('Llave pública copiada al portapapeles');
