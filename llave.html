@@ -17,7 +17,7 @@
 
     <script>
         function descargarLlave() {
-            fetch('./public_key.pem')
+            fetch('./Fatima_publica.pem')
                 .then(response => response.blob())
                 .then(blob => {
                     const enlace = document.createElement('a');
