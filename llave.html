@@ -17,10 +17,19 @@
 
     <script>
         function descargarLlave() {
-            const enlace = document.createElement('a');
-            enlace.href = './public_key.pem'; // Ruta del archivo
-            enlace.download = 'Fatima_llave.pem'; // Nombre del archivo al descargar
-            enlace.click();
+            fetch('./public_key.pem')
+                .then(response => response.blob())
+                .then(blob => {
+                    const enlace = document.createElement('a');
+                    const url = URL.createObjectURL(blob);
+                    enlace.href = url;
+                    enlace.download = 'Fatima_llave.pem'; // Nombre del archivo al descargar
+                    enlace.click();
+                    URL.revokeObjectURL(url); // Liberar el objeto URL
+                })
+                .catch(err => {
+                    console.error('Error al descargar el archivo:', err);
+                });
         }
     </script>
 </body>
