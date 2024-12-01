@@ -13,32 +13,15 @@
     <div class="titulo">
         <h1>Hola, esta es mi llave pública</h1>
     </div>
-    <button class="btn-llave" id="copiar-llave">Copiar Llave Pública</button>
+    <button class="btn-llave" onclick="descargarLlave()">Descargar Llave Pública</button>
 
     <script>
-        document.getElementById('copiar-llave').addEventListener('click', () => {
-            // Contenido de la llave pública sin espacios extra
-            const contenidoLlave = `
------BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApQV/fLO1N1kvXfDQTPkm
-6JIHQmdtCPsia4B/ws8hID0em6pJgSFxnKuVIfuHGpbozf0R78oa4hPzGX2G/aje
-TBMS3JCrXevwtLovz/GFAJdQM8TGU+1ObFEINyMcmSOsqlLAFiJOBf138n2uLIXL
-s7uk9xIIq7T4lOWvMitqrumeO3BMTzLeqMGvRIuA1LfdqF9bSMjWDFliN4gSJgQ8
-wDfz7/jRCSZl8DaTo6VbaBcB1RcyWlHGobploKkN1MdEQCiSicbJIWVlDbkq4Mzm
-uzqWj0LyVUus2RBplleUYlZ25bt8dTuLvpZ7RoyZzXEKvHeBjZ+FpmcfvEqqocH3
-RwIDAQAB
------END PUBLIC KEY-----
-`.trim();
-
-            // Copiar al portapapeles
-            navigator.clipboard.writeText(contenidoLlave)
-                .then(() => {
-                    alert('Llave pública copiada al portapapeles');
-                })
-                .catch(err => {
-                    console.error('Error al copiar al portapapeles:', err);
-                });
-        });
+        function descargarLlave() {
+            const enlace = document.createElement('a');
+            enlace.href = './public_key.pem'; // Ruta del archivo
+            enlace.download = 'Fatima_llave.pem'; // Nombre del archivo al descargar
+            enlace.click();
+        }
     </script>
 </body>
 
