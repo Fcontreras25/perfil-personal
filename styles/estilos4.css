@@ -10,23 +10,41 @@ body {
     padding: 20px;
 }
 
-/* Contenedores con estilo */
+/* Encabezado principal */
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Contenedor para los dos divs */
+.contenedores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Contenedores individuales */
 .contenedor-escom,
 .contenedor-cecyt {
-    width: 90%;
-    max-width: 1100px;
+    flex: 1;
+    min-width: 300px;
     background-color: #f7f5ea;
-    margin: 20px auto;
     padding: 20px;
     border-radius: 25px;
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
     border: 1px solid #d1d1c7;
 }
 
-/* Encabezados */
-h1 {
+/* Encabezados de los contenedores */
+h2 {
     text-align: center;
-    font-size: 1.8em;
+    font-size: 1.5em;
     color: #444;
     margin-bottom: 15px;
 }
@@ -48,49 +66,17 @@ p {
 /* Imágenes con borde redondeado y sombra */
 .imagen img {
     width: 100%;
-    max-width: 350px;
+    max-width: 300px;
     height: auto;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Secciones adicionales para títulos */
-.resaltado {
-    font-weight: bold;
-    background-color: #d8e4c9;
-    padding: 10px 15px;
-    border-radius: 10px;
-    display: inline-block;
-    margin-bottom: 10px;
-    color: #444;
-}
-
-/* Botones de navegación (opcional) */
-nav {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-nav a {
-    display: inline-block;
-    background-color: #a4b394;
-    color: white;
-    padding: 10px 20px;
-    margin: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 15px;
-    transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: #899a7a;
-}
-
 /* Contenedor del botón de descarga de CV */
 .descargar-cv {
+    width: 100%;
     text-align: center;
-    margin: 40px 0;
+    margin-top: 40px;
 }
 
 /* Botón de descarga de CV */
