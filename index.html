@@ -43,7 +43,25 @@
             </ul>
         </div>
         <button ><a href="hobbie.html" id="bH">Hobbies</a> </button>
-        <button ><a href="llave.html" id="bH">LLave publica</a> </button>
+        <button onclick="descargarLlave()">LLave publica</button>
+        <script>
+            function descargarLlave() {
+                fetch('./Fatima_publica.pem')
+                    .then(response => response.blob())
+                    .then(blob => {
+                        const enlace = document.createElement('a');
+                        const url = URL.createObjectURL(blob);
+                        enlace.href = url;
+                        enlace.download = 'Fatima_llave.pem'; // Nombre del archivo al descargar
+                        enlace.click();
+                        URL.revokeObjectURL(url); // Liberar el objeto URL
+                    })
+                    .catch(err => {
+                        console.error('Error al descargar el archivo:', err);
+                    });
+            }
+        </script>
+
     </div>
     <div class="datosCuriosos fondoP">
         <div class="dato1 alinear fondo">
