@@ -1,0 +1,38 @@
+/* Estilos generales para el cuerpo */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Estilos para cada contenedor */
+.contenedor-escom,
+.contenedor-cecyt {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+/* Añadir bordes y sombras a las imágenes */
+.imagen img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 20px auto;
+}
+
+/* Estilos para los encabezados */
+h1 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Estilos para los párrafos */
+p {
+    text-align: justify;
+    line-height: 1.6;
+}
