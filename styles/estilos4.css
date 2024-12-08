@@ -1,38 +1,113 @@
-/* Estilos generales para el cuerpo */
+/* Estilo general del cuerpo */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5e1;
+    color: #333;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
-/* Estilos para cada contenedor */
+/* Contenedores con estilo */
 .contenedor-escom,
 .contenedor-cecyt {
-    width: 50%;
-    box-sizing: border-box;
-    padding: 20px;
-    background-color: #f5f5f5;
-}
-
-/* Añadir bordes y sombras a las imágenes */
-.imagen img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    display: block;
+    width: 90%;
+    max-width: 1100px;
+    background-color: #f7f5ea;
     margin: 20px auto;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    border: 1px solid #d1d1c7;
 }
 
-/* Estilos para los encabezados */
+/* Encabezados */
 h1 {
-    font-size: 1.5em;
     text-align: center;
+    font-size: 1.8em;
+    color: #444;
+    margin-bottom: 15px;
 }
 
-/* Estilos para los párrafos */
+/* Párrafos */
 p {
     text-align: justify;
     line-height: 1.6;
+    color: #555;
+}
+
+/* Contenedor de la imagen */
+.imagen {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Imágenes con borde redondeado y sombra */
+.imagen img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Secciones adicionales para títulos */
+.resaltado {
+    font-weight: bold;
+    background-color: #d8e4c9;
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+/* Botones de navegación (opcional) */
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav a {
+    display: inline-block;
+    background-color: #a4b394;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #899a7a;
+}
+
+/* Contenedor del botón de descarga de CV */
+.descargar-cv {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* Botón de descarga de CV */
+.boton-cv {
+    display: inline-block;
+    background-color: #899a7a;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-cv:hover {
+    background-color: #718165;
+    transform: scale(1.05);
 }
